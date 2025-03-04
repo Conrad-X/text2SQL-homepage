@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text2SQL - Convert Natural Language to SQL Queries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Text2SQL</h1>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="https://github.com/yourusername/text2sql" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <i class="fas fa-bars" onclick="showMenu()"></i>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transform Natural Language into SQL Queries</h1>
+                    <p>Text2SQL uses advanced AI to convert your plain English questions into precise SQL queries, making database interactions simple for everyone.</p>
+                    <div class="cta-buttons">
+                        <a href="#demo" class="btn btn-primary">Try Demo</a>
+                        <a href="https://github.com/yourusername/text2sql" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Text2SQL Illustration">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Natural Language Processing</h3>
+                    <p>Advanced NLP algorithms understand your questions and intent, even with complex phrasing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Multi-Database Support</h3>
+                    <p>Works with MySQL, PostgreSQL, SQLite, SQL Server, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Optimized Queries</h3>
+                    <p>Generates efficient SQL queries with proper indexing suggestions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Easy Integration</h3>
+                    <p>Simple API and multiple language bindings for seamless integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Try It Yourself</h2>
+            <div class="demo-container">
+                <div class="demo-input">
+                    <h3>Enter your question:</h3>
+                    <textarea id="nlQuery" placeholder="Example: Show me all customers who made a purchase last month"></textarea>
+                    <button id="convertBtn" class="btn btn-primary">Convert to SQL</button>
+                </div>
+                <div class="demo-output">
+                    <h3>Generated SQL:</h3>
+                    <pre id="sqlOutput">-- Your SQL will appear here</pre>
+                    <button id="copyBtn" class="btn btn-secondary">Copy SQL</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="workflow">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <h3>Input</h3>
+                    <p>Enter your question in plain English</p>
+                </div>
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <h3>Analysis</h3>
+                    <p>Our AI analyzes your intent and context</p>
+                </div>
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <h3>Generation</h3>
+                    <p>SQL query is generated and optimized</p>
+                </div>
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <h3>Result</h3>
+                    <p>Get your ready-to-use SQL query</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <div class="docs-grid">
+                <div class="docs-card">
+                    <h3>Getting Started</h3>
+                    <p>Learn how to install and set up Text2SQL in your project.</p>
+                    <a href="#" class="btn btn-secondary">Read Guide</a>
+                </div>
+                <div class="docs-card">
+                    <h3>API Reference</h3>
+                    <p>Detailed documentation of all available methods and parameters.</p>
+                    <a href="#" class="btn btn-secondary">View API Docs</a>
+                </div>
+                <div class="docs-card">
+                    <h3>Examples</h3>
+                    <p>Sample code and use cases to help you implement Text2SQL.</p>
+                    <a href="#" class="btn btn-secondary">See Examples</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Simplify Your Database Queries?</h2>
+            <p>Start converting natural language to SQL today.</p>
+            <a href="https://github.com/yourusername/text2sql" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Text2SQL</h2>
+                    <p>Making databases speak human.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="https://github.com/yourusername/text2sql">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Text2SQL. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
